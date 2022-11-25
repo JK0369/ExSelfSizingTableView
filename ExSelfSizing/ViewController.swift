@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
   private var items = (0...2).map { String($0) }
+  private let scrollView: UIScrollView = {
+    let scrollView = UIScrollView()
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
+    return scrollView
+  }()
   private let stackView: UIStackView = {
     let stackView = UIStackView()
     stackView.axis = .vertical
@@ -26,6 +31,7 @@ class ViewController: UIViewController {
     view.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     view.estimatedRowHeight = 120
     view.translatesAutoresizingMaskIntoConstraints = false
+    view.isScrollEnabled = false
     return view
   }()
   private let button: UIButton = {
@@ -47,7 +53,8 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(stackView)
+    view.addSubview(scrollView) // <-
+    scrollView.addSubview(stackView) // <-
     view.addSubview(button)
     view.addSubview(label)
     
@@ -55,9 +62,16 @@ class ViewController: UIViewController {
     tableView.dataSource = self
     
     NSLayoutConstraint.activate([
-      stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-      stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+      scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+      
+      stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+      stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+      stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+      stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+      stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor), // 주의
       
       label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       label.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
