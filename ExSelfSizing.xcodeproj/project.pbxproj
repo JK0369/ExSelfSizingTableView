@@ -14,6 +14,7 @@
 		4A74E6FA292FD4B80049FA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A74E6F9292FD4B80049FA02 /* Assets.xcassets */; };
 		4A74E6FD292FD4B80049FA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A74E6FB292FD4B80049FA02 /* LaunchScreen.storyboard */; };
 		4A74E705292FD4C40049FA02 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74E704292FD4C40049FA02 /* SelfSizingTableView.swift */; };
+		4ADEE43B29304F45007DFAD5 /* SelfSizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADEE43A29304F45007DFAD5 /* SelfSizingCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4A74E6FC292FD4B80049FA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A74E6FE292FD4B80049FA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A74E704292FD4C40049FA02 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
+		4ADEE43A29304F45007DFAD5 /* SelfSizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4A74E6F2292FD4B60049FA02 /* SceneDelegate.swift */,
 				4A74E6F4292FD4B60049FA02 /* ViewController.swift */,
 				4A74E704292FD4C40049FA02 /* SelfSizingTableView.swift */,
+				4ADEE43A29304F45007DFAD5 /* SelfSizingCollectionView.swift */,
 				4A74E6F6292FD4B60049FA02 /* Main.storyboard */,
 				4A74E6F9292FD4B80049FA02 /* Assets.xcassets */,
 				4A74E6FB292FD4B80049FA02 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				4A74E6F5292FD4B60049FA02 /* ViewController.swift in Sources */,
 				4A74E705292FD4C40049FA02 /* SelfSizingTableView.swift in Sources */,
 				4A74E6F1292FD4B60049FA02 /* AppDelegate.swift in Sources */,
+				4ADEE43B29304F45007DFAD5 /* SelfSizingCollectionView.swift in Sources */,
 				4A74E6F3292FD4B60049FA02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
